@@ -21,7 +21,7 @@ const LoginForm = (props) => {
           password: pass_field
       })
       try {
-          fetch('http://localhost:8000/login/',{
+          fetch(process.env.REACT_APP_API_URL_BASE + '/login/',{
           method: 'POST',
           body: payload,
           headers:{
@@ -87,18 +87,20 @@ const LoginForm = (props) => {
       }
     }
     return (
-    <div >
-      <h2>Login</h2>
-            <form className="login-form" onSubmit={handleSubmit}>
-                <label className="login-label" htmlFor="email">Email</label>
-                <input className="login-input" required value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="email@email.com" id="email" name="email"/>
-                <label className="login-label" htmlFor="password">Password</label>
-                <input className="login-input" required value={pass_field} onChange={(e) => setPass(e.target.value)} type="password" placeholder="*********" id="password" name="password"/>
-                <button className="login-button" type="submit">Login</button>
-                <p className="text-success"><b>{error}</b></p>
-            </form>
-            <button className="link-btn" onClick={() => navigate('/register')}>Don't have an account? Register here.</button>
-            <p>{loading ? <FidgetSpinner /> : ''}</p>
+    <div>
+      <div className='page-view'>
+        <h2>Login</h2>
+              <form className="login-form" onSubmit={handleSubmit}>
+                  <label className="login-label" htmlFor="email">Email</label>
+                  <input className="login-input" required value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="email@email.com" id="email" name="email"/>
+                  <label className="login-label" htmlFor="password">Password</label>
+                  <input className="login-input" required value={pass_field} onChange={(e) => setPass(e.target.value)} type="password" placeholder="*********" id="password" name="password"/>
+                  <button className="login-button" type="submit">Login</button>
+                  <p className="text-success"><b>{error}</b></p>
+              </form>
+              <button className="link-btn" onClick={() => navigate('/register')}>Don't have an account? Register here.</button>
+              <p>{loading ? <FidgetSpinner /> : ''}</p>
+      </div>
     </div>
   );
 };

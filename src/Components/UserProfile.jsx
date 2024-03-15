@@ -15,7 +15,7 @@ const UserProfile = () => {
 
     useEffect(() => {
         if (!window.sessionStorage.getItem("auth")) navigate('/unauthorized')
-        fetch('http://localhost:8000/users/user/' + user_id)
+        fetch(process.env.REACT_APP_API_URL_BASE  + '/users/user/' + user_id)
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -100,7 +100,7 @@ const UserProfile = () => {
             <tbody>
                 {
                     players.map((players,i) => (
-                    <tr key={players.user_id}>
+                    <tr key={players.user_id} className='char-rows'>
                         <td>{players.charname}</td>
                         <td>{players.level}</td>
                         <td>{players.class_field}</td>

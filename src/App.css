@@ -1,20 +1,32 @@
 .App {
   text-align: center;
+  color: white;
   display: flex;
   min-height: 100vh;
   align-items: top;
   justify-content: center;
-  columns: white;
-  background-image: linear-gradient(79deg, #7066f6, #3d78ad 48%, #4df7a2);
+  columns: black;
+  background-image: radial-gradient(#6b0078, #380356 48%, #000000);
 }
 
-.auth-form-container, .login-form, .register-form{
+.login-form, .register-form{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.page-view{
+  margin-top: 50%;
 }
 
 .flex-horizontal {
   flex-direction: row;
+
+}
+
+.char-rows{
+  background-color: rgba(0,0,0,.3);
+  border-bottom: 1px solid white;
 }
 
 .profile-img {
@@ -75,7 +87,7 @@
   padding: 20px;
   border-radius: 30px;
   cursor: pointer;
-  color: #7066f6;
+  color: #93009c;
 }
 
 .link-btn {

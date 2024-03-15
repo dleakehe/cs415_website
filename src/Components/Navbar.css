@@ -1,13 +1,14 @@
 .navbar {
-    height: 6.8vh;
-    background: white;
+    height: 6.8avh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #000000;
   }
   
+  
   .navbar-logo {
-    color: #7066f6;
+    color: #93009c;
     text-decoration: none;
     font-size: 1.5rem;
     display: flex;
@@ -17,7 +18,7 @@
   }
 
   .navbar-item {
-    color: #7066f6;
+    color: #93009c;
     text-decoration: none;
     display: unset;
     align-items: center;
@@ -25,13 +26,13 @@
   }
 
   .navbar-menu {
-    color: #7066f6;
+    color: #93009c;
     font-size: 1.2rem;
     text-decoration: none;
   }
   
   .menu-items {
-    color: #7066f6;
+    color: #93009c;
   }
 
   .nav-item {
@@ -59,14 +60,14 @@
     background: transparent;
     padding: 6px 16px;
     font-size: 1.1rem;
-    color: #4df7a2;
-    background: #7066f6;
+    color: white;
+    background: #93009c;
     border-radius: 5px;
     transition: .3s all ease-out;
     cursor: pointer;
   }
   
   .btn:hover {
-    color: #7066f6;
-    background: #4df7a2;
+    color: #93009c;
+    background: white;
   }

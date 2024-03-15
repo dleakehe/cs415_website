@@ -5,7 +5,7 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className='page-view'>
       <h1>CS415 Landing Page</h1>
       <p><font color="white">This is the publicly accessible page for all users to see</font></p>
       <h1>{process.env.NODE_ENV}</h1>
