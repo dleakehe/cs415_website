@@ -34,7 +34,7 @@ function UnAuthorized() {
 }
 
 function App() {
-  app.get('/cors', (req, res) => {
+  app.get('/', (req, res) => {
     res.set('Access-Control-Allow-Origin', '*');
     res.send({ "msg": "This has CORS enabled 🎈" })
     })
