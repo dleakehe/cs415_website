@@ -22,6 +22,7 @@ export const RegisterForm = (props) => {
         })
         try {
             fetch(process.env.REACT_APP_API_URL_BASE + 'users/',{
+            mode: 'cors',
             method: 'POST',
             body: payload,
             headers:{

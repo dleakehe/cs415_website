@@ -22,6 +22,7 @@ const LoginForm = (props) => {
       })
       try {
           fetch(process.env.REACT_APP_API_URL_BASE + '/login/',{
+          mode: 'cors',
           method: 'POST',
           body: payload,
           headers:{
