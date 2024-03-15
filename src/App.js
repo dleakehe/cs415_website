@@ -34,10 +34,6 @@ function UnAuthorized() {
 }
 
 function App() {
-  app.get('/', (req, res) => {
-    res.set('Access-Control-Allow-Origin', '*');
-    res.send({ "msg": "This has CORS enabled 🎈" })
-    })
   return (
     <>
       <NavbarTop />

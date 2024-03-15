@@ -22,11 +22,11 @@ const LoginForm = (props) => {
       })
       try {
           fetch(process.env.REACT_APP_API_URL_BASE + '/login/',{
-          mode: 'cors',
           method: 'POST',
           body: payload,
           headers:{
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': '*'
               }
           }).then((res) => {
                 setLoading(false)
