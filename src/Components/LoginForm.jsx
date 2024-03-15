@@ -25,8 +25,7 @@ const LoginForm = (props) => {
           method: 'POST',
           body: payload,
           headers:{
-              'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': '*'
+              'Content-Type': 'application/json'
               }
           }).then((res) => {
                 setLoading(false)
