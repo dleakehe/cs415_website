@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
-const REACT_APP_API_URL_BASE = () => {
+const Races = () => {
     const navigate = useNavigate();
     const [races, setRaces]  = useState([]);
     const [racesColumns, setRacesColumns] = useState([]);
