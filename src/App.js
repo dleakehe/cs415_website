@@ -13,6 +13,8 @@ import UserProfile from "./Components/UserProfile";
 import UserView from "./Components/UserView";
 import Module from "./Components/Module";
 import NavbarTop from "./Components/Navbar";
+import Classes from "./Components/Classes";
+import Races from "./Components/Races";
 
 
 function NoMatch() {
@@ -46,6 +48,8 @@ function App() {
             <Route path="/users" element={<UserView />} />
             <Route path="/modules/:id" element={<Module />} />
             <Route path="/unauthorized" element={<UnAuthorized />} />
+            <Route path="/classes" element={<Classes />} />
+            <Route path="/races" element={<Races />} />
             <Route path="*" element={<NoMatch />} />
           </Routes>
           </div>

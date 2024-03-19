@@ -10,15 +10,6 @@ import 'rsuite/Nav/styles/index.css';
 function NavbarTop() {
     const [dropdown, setDropdown] = useState(false);
     const [pages, setPages] = useState([]);
-
-    useEffect(() => {
-        fetch(process.env.REACT_APP_API_URL_BASE + '/pages')
-        .then(res => res.json())
-        .then(data => {
-            setPages(data.pages)
-        })
-        .catch(error => console.error(error));
-    }, []);
   return (
     <>
         <Navbar>
@@ -34,13 +25,9 @@ function NavbarTop() {
                 <Nav.Item><Link to="/userprofile" className="navbar-item">User Profile</Link></Nav.Item>
                 <Nav.Item><Link to="/characters" className="navbar-item">Characters</Link></Nav.Item>
                 <Nav.Menu title="Resources" className="navbar-item">
-                    {
-                        pages.map((page,i) => (
-                            <Nav.Item>
-                                <Link to={'/modules/' + page.page_data_id} className="navbar-menu">{page.page_menu}</Link>
-                            </Nav.Item>
-                        ))
-                    }
+                     <Nav.Item><Link to='/classes' className="navbar-menu">Classes</Link></Nav.Item>
+                     <Nav.Item><Link to='/races' className="navbar-menu">Races</Link></Nav.Item>
+                     <Nav.Item><Link to='/skills' className="navbar-menu">Skills</Link></Nav.Item>
                 </Nav.Menu>
                 </Nav>
                 <Nav pullRight>
