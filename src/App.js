@@ -15,6 +15,7 @@ import Module from "./Components/Module";
 import NavbarTop from "./Components/Navbar";
 import Classes from "./Components/Classes";
 import Races from "./Components/Races";
+import Characters from "./Components/Characters";
 
 
 function NoMatch() {
@@ -50,6 +51,7 @@ function App() {
             <Route path="/unauthorized" element={<UnAuthorized />} />
             <Route path="/classes" element={<Classes />} />
             <Route path="/races" element={<Races />} />
+            <Route path="/characters" element={<Characters />} />
             <Route path="*" element={<NoMatch />} />
           </Routes>
           </div>
