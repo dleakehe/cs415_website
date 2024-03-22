@@ -1,3 +1,4 @@
+/*
 import React, {useState, useEffect} from 'react'
 import { useNavigate } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,8 +18,8 @@ const Characters = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            setClassesColumns(Object.keys(data.classes))
-            setClasses(data.classes)
+            setCharactersColumns(Object.keys(data.classes))
+            setCharacters(data.classes)
         })
         .catch(error => console.error(error));
     }, []);
@@ -60,3 +61,4 @@ const Characters = () => {
 }
 
 export default Characters
+*/
